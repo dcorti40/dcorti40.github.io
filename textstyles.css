@@ -24,6 +24,7 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
+  font-famiy: 'Times New Roman', serif;
 }
 
 .sidebar h2 {
@@ -39,7 +40,7 @@ body {
 }
 
 .sidebar ul li a {
-  color: #d4af37;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
