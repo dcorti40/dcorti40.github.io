@@ -24,11 +24,12 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
-  font-famiy: 'Times New Roman', serif;
+  font-famiy: "Times New Roman", Times, serif;
 }
 
 .sidebar h2 {
   margin-bottom: 20px;
+	"Times New Roman", Times, serif;
 }
 
 .sidebar ul {
@@ -37,6 +38,7 @@ body {
 
 .sidebar ul li {
   margin: 15px 0;
+ 	"Times New Roman", Times, serif;
 }
 
 .sidebar ul li a {
