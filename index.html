@@ -3,68 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <title>Portfolio with Sidebar</title>
+  <link rel="stylesheet" href="textstyle.css" />
 </head>
 <body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>My Portfolio</h2>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-<header>
-    <nav>
-      <div class="menu-container">
-        <div class="logo">Port-olio</div>
-        <div class="nav-links">
-          <a href="index.html" id="border">About</a>
-        </div>
-        <div class="darkmode-toggle">
-          <label class="switch">
-            <input type="checkbox" id="darkMode">
-            <span class="slider"></span>
-          </label>
-          <span class="icon" id="dark-icon">☀️</span>
-        </div>
-      </div>
-    </nav>
-</header>
+    <main class="content">
+      <section id="about">
+        <h1>About Me</h1>
+        <p>Hello! I’m a web developer passionate about creating clean and functional websites.</p>
+      </section>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+      <section id="projects">
+        <h1>Projects</h1>
+        <ul>
+          <li>Portfolio Website</li>
+          <li>Weather App</li>
+          <li>To-Do List</li>
+        </ul>
+      </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I'm a passionate developer who loves building websites and web apps. This is my portfolio where I share some of my best work.
-  </p>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Project One</h3>
-    <p>Description of what the project does, what tech you used, and a link to the live site or code.</p>
-    <p><a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a></p>
+      <section id="contact">
+        <h1>Contact</h1>
+        <p>Email: you@example.com</p>
+      </section>
+    </main>
   </div>
-
-  <div class="project">
-    <h3>Project Two</h3>
-    <p>Another example project. You can include screenshots, videos, or links.</p>
-    <p><a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a></p>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>You can reach me via email at <a href="mailto:devin.corti@gmail.com">devin.corti@gmail.com</a></p>
-  <p>Or find me on <a href="https://linkedin.com/in/devin-corti" target="_blank">LinkedIn</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Your Name. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
