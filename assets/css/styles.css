@@ -182,11 +182,6 @@ img {
     color: var(--first-color);
 }
 
-.nav__menu {
-    display: grid;
-    row-gap: 2rem;
-}
-
 @media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
