@@ -182,12 +182,7 @@ img {
     color: var(--first-color);
 }
 
-.nav__menu {
-    display: grid;
-    row-gap: 2rem;
-}
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1600px){
     .nav__menu{
         position: fixed;
         bottom: -100%;
@@ -202,7 +197,6 @@ img {
 }
 
 .nav__list{
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
