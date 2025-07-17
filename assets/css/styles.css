@@ -157,7 +157,7 @@ img {
 /*==================== NAV ====================*/
 .nav{
     max-width: 1600px;
-    height: var(--header-height) + 100rem;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,10 +182,10 @@ img {
     color: var(--first-color);
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 2000px){
     .nav__menu{
         position: fixed;
-        bottom: 100%;
+        bottom: 500px;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
