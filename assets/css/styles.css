@@ -156,7 +156,7 @@ img {
 
 /*==================== NAV ====================*/
 .nav{
-    max-width: 968px;
+    max-width: 1600px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -182,7 +182,7 @@ img {
     color: var(--first-color);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1600px){
     .nav__menu{
         position: fixed;
         bottom: -100px;
