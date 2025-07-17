@@ -157,7 +157,7 @@ img {
 /*==================== NAV ====================*/
 .nav{
     max-width: 1600px;
-    height: var(--header-height);
+    height: var(--header-height) + 100rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
