@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 142; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -156,7 +156,7 @@ img {
 
 /*==================== NAV ====================*/
 .nav{
-    max-width: 1600px;
+    max-width: 968px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -187,7 +187,7 @@ img {
     row-gap: 2rem;
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
         bottom: -100%;
