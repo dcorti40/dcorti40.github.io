@@ -719,12 +719,12 @@
                                 }
                             }).then(response => {
                                 if (response.ok) {
-                                    formStatus.textContent = "✅ Thanks! Your message has been sent.";
+                                    formStatus.textContent = "✅ Thanks! Your message has been sent. I'll be in contact shortly.";
                                     formStatus.style.color = "green";
                                     form.reset();
                                 } else {
                                     response.json().then(data => {
-                                        formStatus.textContent = data.error || "❌ Oops! Something went wrong.";
+                                        formStatus.textContent = data.error || "❌ Oops! Something went wrong. Please try again later, or email me directly.";
                                         formStatus.style.color = "red";
                                     });
                                 }
