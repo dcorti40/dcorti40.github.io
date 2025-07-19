@@ -220,7 +220,7 @@ img {
 }
 
 .nav__list{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -1031,6 +1031,10 @@ img {
         grid-column: initial;
     }
 
+    .about__subtitle{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 
     .skills__container,
     .about__container,
@@ -1123,6 +1127,8 @@ img {
     .about__img{
         width: 350px;
     }
+
+
     .about__description{
         text-align: initial;
     }
@@ -1213,6 +1219,11 @@ img {
     }
     .home__social{
         transform: translateX(-6rem);
+    }
+
+    .about__subtitle{
+        padding-left: 23rem;
+        padding-right: 23rem;
     }
 
     .services__container{
