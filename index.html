@@ -672,36 +672,68 @@
                             </div>
                         </div>
                     </div>
-
-                    <form action="" class="contact__form grid">
+                    <form id="contactForm" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <label for="name" class="contact__label">Name</label>
+                                <input type="text" id="name" name="name" class="contact__input" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <label for="email" class="contact__label">Email</label>
+                                <input type="email" id="email" name="email" class="contact__input" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Phone</label>
-                                <input type="text" class="contact__input">
+                                <label for="phone" class="contact__label">Phone</label>
+                                <input type="text" id="phone" name="phone" class="contact__input" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Message</label>
-                                <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                <label for="message" class="contact__label">Message</label>
+                                <textarea id="message" name="message" cols="0" rows="7" class="contact__input" required></textarea>
                             </div>
 
                             <div>
-                                <a href="#" class="button button--flex">
+                                <button type="submit" class="button button--flex">
                                     Send Message
                                     <i class="uil uil-message button__icon"></i>
-                                </a>
+                                </button>
                             </div>
-
                         </div>
                     </form>
 
+                    <!-- Message output -->
+                    <div id="formStatus" class="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
+
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function (e) {
+                            e.preventDefault();
+
+                            const form = e.target;
+                            const formStatus = document.getElementById("formStatus");
+                            const data = new FormData(form);
+
+                            fetch("https://formspree.io/f/xjkokqvb", {
+                                method: "POST",
+                                body: data,
+                                headers: {
+                                    'Accept': 'application/json'
+                                }
+                            }).then(response => {
+                                if (response.ok) {
+                                    formStatus.textContent = "✅ Thanks! Your message has been sent.";
+                                    formStatus.style.color = "green";
+                                    form.reset();
+                                } else {
+                                    response.json().then(data => {
+                                        formStatus.textContent = data.error || "❌ Oops! Something went wrong.";
+                                        formStatus.style.color = "red";
+                                    });
+                                }
+                            }).catch(() => {
+                                formStatus.textContent = "❌ Network error. Please try again.";
+                                formStatus.style.color = "red";
+                            });
+                        });
+                    </script>
                 </div>
 
             </section>
