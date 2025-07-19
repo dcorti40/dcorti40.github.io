@@ -1031,10 +1031,6 @@ img {
         grid-column: initial;
     }
 
-    .home__img{
-        order: 1;
-        justify-self: center;
-    }
 
     .skills__container,
     .about__container,
