@@ -70,32 +70,55 @@ tabs.forEach(tab =>{
     })
 })
 
-/*==================== SERVICES MODAL ====================*/
+/*Portfolio Modal*/
 
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close')
+const modal = document.querySelector(".portfolio__modal");
+const closeModal = document.querySelector(".portfolio__modal-close");
+const modalTitle = document.getElementById("modal-title");
+const modalImg = document.getElementById("modal-img");
+const modalList = document.getElementById("modal-list");
 
-let modal = function(modalClick){
-    modalViews[modalClick].classList.add('active-modal')
-}
+document.querySelector(".portfolio__container").addEventListener("click", (e) => {
+    if (!e.target.closest(".portfolio__button")) return;
 
-modalBtns.forEach((modalBtn, i) =>{
-    modalBtn.addEventListener('click', () =>{
-        modal(i)
-    })
-})
+    e.preventDefault();
 
-modalCloses.forEach((modalClose, i) =>{
-    modalClose.addEventListener('click', () =>{
-        modalViews.forEach((modalView) =>{
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
+    const button = e.target.closest(".portfolio__button");
+    const slide = button.closest(".swiper-slide");
+
+    // Clear previous modal content
+    modalTitle.textContent = "";
+    modalImg.src = "";
+    modalList.innerHTML = "";
+
+    // Fill modal with new content
+    modalTitle.textContent = slide.dataset.title;
+    modalImg.src = slide.dataset.img;
+
+    const bullets = slide.dataset.description.split("|");
+    bullets.forEach(text => {
+        const li = document.createElement("li");
+        li.classList.add("portfolio__modal-item");
+        li.innerHTML = `
+      <i class="uil uil-check-circle portfolio__modal-icon"></i>
+      <p>${text}</p>
+    `;
+        modalList.appendChild(li);
+    });
+
+    modal.style.display = "flex";
+});
+
+// Close modal listeners as before
+closeModal.addEventListener("click", () => modal.style.display = "none");
+window.addEventListener("click", e => {
+    if (e.target === modal) modal.style.display = "none";
+});
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
+    preventClicks: false,
+    preventClicksPropagation: false,
     cssMode: true,
     loop: true,
     navigation: {

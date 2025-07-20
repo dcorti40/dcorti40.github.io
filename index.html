@@ -581,40 +581,53 @@
                 <div class="portfolio__container container swiper-container">
                     <div class="swiper-wrapper">
                         <!--==================== PORTFOLIO 1====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio1.jpg" alt ="" class="portfolio__img">
+                        <div class="portfolio__content grid swiper-slide"
+                            data-title="Robotic End Effectors"
+                            data-description="Designed and built robotic end effectors to automate construction processes."
+                            data-img="assets/img/portfolio1.png">
+
+                            <img src="assets/img/portfolio1.png" alt ="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Modern Website</h3>
-                                <p class="portfolio__description">Created a website compatible with all devices</p>
+                                <h3 class="portfolio__title">Robotic End Effectors</h3>
+                                <p class="portfolio__description">Designed and built end effectors to automate construction processes</p>
                                 <a class="button button--flex button--small portfolio__button">
-                                    Demo
+                                    Demo Coming Soon
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
+
                         </div>
                         <!--==================== PORTFOLIO 2====================-->
-                        <div class="portfolio__content grid swiper-slide">
+                        <div class="portfolio__content grid swiper-slide"
+                             data-title="Automatic Drink Robot"
+                             data-description="Built a fully automated drink-making robot capable of preparing 4 drinks at a time."
+                             data-img="assets/img/portfolio2.jpg">
                             <img src="assets/img/portfolio2.jpg" alt ="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Brand Design</h3>
-                                <p class="portfolio__description">Created a website compatible with all devices</p>
+                                <h3 class="portfolio__title">Automatic Drink Robot</h3>
+                                <p class="portfolio__description">Built a robot that will automatically make up to 4 drinks at a time</p>
                                 <a class="button button--flex button--small portfolio__button">
-                                    Demo
+                                    Demo Coming Soon
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
                         </div>
+
                         <!--==================== PORTFOLIO 3====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio3.jpg" alt ="" class="portfolio__img">
+                        <div class="portfolio__content grid swiper-slide"
+                             data-title="FIRST Tech Challenge Robots"
+                             data-description="Built FTC robots that competed on the world stage|Won provincial championships"
+                             data-img="assets/img/portfolio3.jpg">
+
+                        <img src="assets/img/portfolio3.jpg" alt ="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Online Store</h3>
-                                <p class="portfolio__description">Created a website compatible with all devices</p>
+                                <h3 class="portfolio__title">FIRST Tech Challenge Robots</h3>
+                                <p class="portfolio__description">Built FTC robots that competed on the world stage</p>
                                 <a class="button button--flex portfolio__button">
-                                    Demo
+                                    Demo Coming Soon
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
@@ -628,11 +641,16 @@
                         <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
                     </div>
                     <div class="swiper-pagination">
-
                     </div>
-
                 </div>
-                
+                <div class="portfolio__modal">
+                    <div class="portfolio__modal-content">
+                        <i class="uil uil-times portfolio__modal-close"></i>
+                        <img id="modal-img" src="" alt="" style="width:100%; border-radius:10px; margin-bottom:15px;">
+                        <h4 class="portfolio__modal-title" id="modal-title"></h4>
+                        <ul class="portfolio__modal-items grid" id="modal-list"></ul>
+                    </div>
+                </div>
             </section>
 
             <!--==================== PROJECT IN MIND ====================-->
@@ -640,15 +658,15 @@
                 <div class="project__bg">
                     <div class="project__container container grid">
                         <div class="project__data">
-                            <h2 class="project__title">You have a new project</h2>
-                            <p class="project__description">Contact me??</p>
+                            <h2 class="project__title">Interested in working together?</h2>
+                            <p class="project__description">Or just want to chat</p>
                             <a href="#contact" class="button button--flex button--white">
                                 Contact Me
                                 <i class="uil uil-message project__icon button__icon"></i>
                             </a>
                         </div>
 
-                        <img src="assets/img/project.png" alt="" class="project__img">
+                        <img src="assets/img/project1.png" alt="" class="project__img">
                     </div>
                 </div>
 
@@ -665,27 +683,32 @@
                         <div class="media__content swiper-slide">
                             <div class="media__data">
                                 <div class="media__header">
-                                    <img src="assets/img/testimonial1.jpg" alt="" class="media__img">
+                                    <img src="assets/img/CochraneNow.png" alt="" class="media__img">
                                     <div>
-                                        <h3 class="media__name">News Article 1</h3>
-                                        <span class="media__client">Client</span>
+                                        <h3 class="media__name">CochraneNow</h3>
+                                        <a href="https://cochranenow.com/articles/spingbanks-valedictorian-and-robotics-champ-heading-east-to-study-engineering" class="media__client">
+                                            <i class="uil uil-link"></i>
+                                            <u>Full Artice</u>
+                                        </a>
                                     </div>
                                 </div>
-                                <p class="media__description">Quote/description 1</p>
-
+                                <p class="media__description">Springbank's valedictorian and robotics champ heading east to study engineering</p>
                             </div>
                         </div>
                         <!--==================== Media 2====================-->
                         <div class="media__content swiper-slide">
                             <div class="media__data">
                                 <div class="media__header">
-                                    <img src="assets/img/testimonial2.jpg" alt="" class="media__img">
+                                    <img src="assets/img/CTV.png" alt="" class="media__img">
                                     <div>
-                                        <h3 class="media__name">News Article 2</h3>
-                                        <span class="media__client">Client</span>
+                                        <h3 class="media__name">CTV News</h3>
+                                        <a href="https://www.ctvnews.ca/calgary/article/springbank-community-high-school-students-heading-to-world-robotics-competition/" class="media__client">
+                                            <i class="uil uil-link"></i>
+                                            <u>Full Article</u>
+                                        </a>
                                     </div>
                                 </div>
-                                <p class="media__description">Quote/description 2</p>
+                                <p class="media__description">Springbank Community High School students heading to world robotics competition</p>
 
                             </div>
                         </div>
@@ -693,13 +716,17 @@
                         <div class="media__content swiper-slide">
                             <div class="media__data">
                                 <div class="media__header">
-                                    <img src="assets/img/testimonial3.jpg" alt="" class="media__img">
+                                    <img src="assets/img/Global.png" alt="" class="media__img">
                                     <div>
-                                        <h3 class="media__name">News Article 3</h3>
-                                        <span class="media__client">Client</span>
+                                        <h3 class="media__name">Global News</h3>
+                                        <a href="https://globalnews.ca/news/9599332/springbank-community-high-school-world-robotics-competition/" class="media__client">
+                                            <i class="uil uil-link"></i>
+                                            <u>Full Article</u>
+                                        </a>
                                     </div>
                                 </div>
-                                <p class="media__description">Quote/description 3</p>
+                                <p class="media__description">Springbank Community High School students prepare for world robotics competition
+                                </p>
 
                             </div>
                         </div>
