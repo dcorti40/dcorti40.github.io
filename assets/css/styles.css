@@ -827,8 +827,41 @@ img {
 
 
 
-/*==================== TESTIMONIAL ====================*/
+/*==================== Media ====================*/
+.media__data,
+.media__header{
+    display: flex;
+}
 
+.media__data{
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+}
+
+.media__img{
+    width: 60px;
+    height: 60px;
+    border-radius: 25%;
+    margin-right: var(--mb-0-75);
+}
+
+.media__name{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.media__client{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.media__description{
+    margin-bottom: var(--mb-2-5);
+}
+
+.swiper-container .swiper-pagination-media{
+    bottom: 0;
+}
 
 /*==================== CONTACT ME ====================*/
 .contact__container{
@@ -1016,6 +1049,22 @@ img {
 
     .project__img{
         width: 200px;
+    }
+
+    .media__data,
+    .media__header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media__img{
+        margin-right: 0;
+        margin-bottom: var(--mb-0-25);
+    }
+
+    .media__data,
+    .media__description{
+        text-align: center;
     }
 
 

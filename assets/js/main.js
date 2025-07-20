@@ -108,8 +108,25 @@ let swiper = new Swiper(".portfolio__container", {
     },
 });
 
-/*==================== TESTIMONIAL ====================*/
+/*==================== Media ====================*/
+let swiperMedia = new Swiper(".media__container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
 
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
