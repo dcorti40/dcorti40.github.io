@@ -758,7 +758,7 @@ img {
 }
 
 .portfolio__modal-content{
-    background: #fff;
+    background-color: var(--container-color);
     padding: 20px;
     max-width: 600px;
     width: 90%;
@@ -1051,7 +1051,7 @@ img {
     .services__content{
         padding-right: 3.5rem;
     }
-    .services__modal{
+    .portfolio__modal{
         padding: 0 .5rem;
     }
 
@@ -1216,7 +1216,7 @@ img {
     .services__content{
         padding: 6rem 0 2rem 2.5rem;
     }
-    .services__modal-content{
+    .portfolio__modal-content{
         width: 450px;
     }
 
