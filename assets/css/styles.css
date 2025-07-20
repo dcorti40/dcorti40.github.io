@@ -1059,6 +1059,10 @@ img {
         width: 200px;
     }
 
+    .media__name{
+        align-items: center;
+    }
+
     .media__data,
     .media__header{
         flex-direction: column;
