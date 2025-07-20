@@ -77,6 +77,7 @@ const closeModal = document.querySelector(".portfolio__modal-close");
 const modalTitle = document.getElementById("modal-title");
 const modalImg = document.getElementById("modal-img");
 const modalList = document.getElementById("modal-list");
+const modalLink = document.getElementById("modal-link")
 
 document.querySelector(".portfolio__container").addEventListener("click", (e) => {
     if (!e.target.closest(".portfolio__button")) return;
@@ -90,6 +91,7 @@ document.querySelector(".portfolio__container").addEventListener("click", (e) =>
     modalTitle.textContent = "";
     modalImg.src = "";
     modalList.innerHTML = "";
+    modalLink.href = "#";
 
     // Fill modal with new content
     modalTitle.textContent = slide.dataset.title;
@@ -105,6 +107,13 @@ document.querySelector(".portfolio__container").addEventListener("click", (e) =>
     `;
         modalList.appendChild(li);
     });
+
+    if (slide.dataset.link) {
+        modalLink.href = slide.dataset.link;
+        modalLink.style.display = "inline-flex"; // show if there’s a link
+    } else {
+        modalLink.style.display = "none"; // hide button if no link provided
+    }
 
     modal.style.display = "flex";
 });
